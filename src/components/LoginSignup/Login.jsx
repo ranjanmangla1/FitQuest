@@ -17,7 +17,8 @@ const Login = () => {
 
     const loginUser = async (credentials) => {
         try {
-          const response = await axios.post(`${process.env.REACT_APP_API}/api/v1/auth/login`, credentials);
+          // const response = await axios.post(`${process.env.REACT_APP_API}/api/v1/auth/login`, credentials);
+            const response = await axios.post(`https://sih-fitness-app-api.onrender.com/api/v1/auth/login`, credentials);
           return response.data;
         } catch (error) {
           console.error('Error logging in:', error);
